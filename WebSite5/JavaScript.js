@@ -1,5 +1,11 @@
-﻿
-
+﻿$(document).ready(function messageVisibility() {
+    if ($("#successfulSubmission").length > 0) {
+        $('#contactForm').hide();
+        document.getElementById("messageDetails").style.display = "block";
+        $(".validationMessage").show();
+   
+    }
+});
 
 $(document).ready(function showDropDownUponHover() {
     $('.dropDownHeader').mouseover(function () {
@@ -19,11 +25,11 @@ $(document).ready(function showDropDownUponHover() {
 });
 
 $(document).ready(function changeColourTile() {
-    $('.interact').mouseover(function () {
+    $('.tileIconHome').mouseover(function () {
         
         $(this).css({"backgroundColor":"white", "color":"black"});
     })
-    $('.interact').mouseout(function () {
+    $('.tileIconHome').mouseout(function () {
 
         $(this).css({ "backgroundColor": "", "color": "" });
     })
@@ -55,6 +61,11 @@ function colourResetHeaderLink(x) {
     x.style.color = "white";
 }
 
-function iconPressed(x) {
-    
-}
+$(document).ready(function changeContactText() {
+    $(".contactLinkHeader > a").mouseover(function () {
+        $(this).css({"color": "#3399ff"})
+    })
+    $(".contactLinkHeader > a").mouseout(function () {
+        $(this).css({ "color": "black" })
+    })
+});

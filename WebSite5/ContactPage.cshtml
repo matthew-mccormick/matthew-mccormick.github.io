@@ -1,0 +1,149 @@
+﻿@using System.Configuration;
+
+@{
+    var validationMessage = "";
+    var isvalidationSucess = "SubmitContactForm";
+    Validation.RequireField("senderName", "Name is required.");
+    Validation.RequireField("emailAddress", "Email is required.");
+    Validation.RequireField("subjectField", "The Subject Field is required");
+    Validation.RequireField("messageField", "A Message is required.");
+
+
+
+    if (IsPost && Validation.IsValid())
+    {
+        var newName = new DatabaseDAO();
+        string sendName = Request["senderName"];
+        string emailAddress = Request["emailAddress"];
+        string companyName = Request["companyName"];
+        string subjectField = Request["subjectField"];
+        string messageField = Request["messageField"];
+        newName.addContactDetails(sendName, emailAddress, companyName, subjectField, messageField);
+        //Response.Redirect("/ContactMessageSuccess.cshtml");
+        @:messageVisibility();
+        validationMessage = "Thank you. Your message has been sent.";
+        if (validationMessage == "Thank you. Your message has been sent.")
+        {
+
+            isvalidationSucess = "successfulSubmission";
+
+        }
+    }
+    else if (IsPost && !Validation.IsValid())
+    {
+        validationMessage = "NOT VALID!!!";
+    }
+    }
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Contact</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="JavaScript.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header-block-item">
+            <div class="homeIcon">
+                <a class="dropDownHeader" href="/HtmlPage.html">Mc</a>
+            </div>
+            <h1>Contact</h1>
+        </header>
+
+        <ul id="dropDownBox" class="isHidden">
+            <li> <a id="aboutSideLink" href="About.html" class="dropDownListItem">About </a></li>
+            <li> <a id="experienceSideLink" href="Experience.html" class="dropDownListItem">Experience </a></li>
+            <li> <a id="educationSideLink" href="Education.html" class="dropDownListItem">Education </a></li>
+            <li> <a id="achievementsSideLink" href="Achievements.html" class="dropDownListItem">Achievements</a></li>
+            <li> <a id="infoSideLink" href="Information.html" class="dropDownListItem">Projects</a></li>
+            <li> <a id="contactSideLink" href="ContactPage.cshtml" class="dropDownListItem">Contact</a></li>
+        </ul>
+
+
+    </div>
+
+    <div id="main-body-Content">
+        <p class="validationMessage">@validationMessage</p>
+        
+        <div class="lightSection">
+            
+
+            <div id="messageDetails">
+                <h3> Message Summary</h3>
+                <p class="name">Name: @Request["senderName"]</p>
+                <p class="name">Email: @Request["emailAddress"]</p>
+                <p class="name">Company: @Request["companyName"]</p>
+                <p class="name">Subject: @Request["subjectField"]</p>
+                <p class="name">Message: @Request["messageField"]</p>
+
+            </div>
+
+
+            <h1>
+                Contact Me
+
+            </h1>
+            <h2 class="contactLinkHeader"> <a href="mailto:matthew_mccormick@hotmail.co.uk?subject=Hello&amp;" alt="Click to send an email"> Email </a> | <a href="https://www.linkedin.com/in/matthew-mccormick-7b891179/" alt="Click to view Matthew's LinkedIn Profile'"> LinkedIn </a> | <a href="#contactForm" alt="Navigate to the Contact Me form'"> Web </a></h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
+            </p>
+
+
+            <div id="contactForm">
+                <h3> Send a message</h3>
+
+                <form method="post" action="" class="inputFields">
+                    <label for="name">Name*:</label>
+                    <input type="text" name="senderName" maxlength="100" value="@Request["senderName"]"
+                    @Validation.For("senderName") />
+                    @Html.ValidationMessage("senderName")
+                    <label for="name">Email*:</label>
+                    <input type="text" name="emailAddress" maxlength="100" value="@Request["emailAddress"]"
+                     @Validation.For("emailAddress") />
+                    @Html.ValidationMessage("emailAddress")
+                    <label for="compName">Company:</label>
+                    <input type="text" name="companyName" maxlength="100" value="@Request["companyName"]" />
+                    <label for="subject">Subject*:</label>
+                    <input type="text" name="subjectField" maxlength="100" value="@Request["subjectField"]"
+                     @Validation.For("subjectField") />
+                    @Html.ValidationMessage("subjectField")
+                    <label for="message">Message*:</label>
+                    <textarea type="text" name="messageField" maxlength="500" value="@Request["messageField"]"
+                     @Validation.For("messageField")></textarea>
+                    @Html.ValidationMessage("messageField")
+                    <div id="submitForm">
+                        <input type="submit" value="Submit" id=@isvalidationSucess />
+                        
+                    </div>
+                </form>
+            </div>
+
+            
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

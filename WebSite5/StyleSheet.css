@@ -1,4 +1,8 @@
-﻿body {
+﻿
+/* CSS for main elements and styling*/
+
+
+body {
     font-family: Calibri;
     background-color: #D9D0D0;
     position:absolute;
@@ -8,10 +12,20 @@ margin:0;
 padding:0;
 }
 
-.about-Me > p {
-    background-color: #D9D0D0;
-    font-size: 24px;
+.icon-container {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Header Elements*/
 
 .homeIcon > a {
     font-family:Calibri;
@@ -28,8 +42,6 @@ padding:0;
     top: 1vw;
     left: 0.75vw;
 }
-
-
 
 .header-block-item {
     background-color: #474f5b;/*black;*/
@@ -52,6 +64,7 @@ padding:0;
     z-index: 4;
 
 }
+
 .header-block-item > h1 {
     color:white;
     text-align:left;
@@ -67,6 +80,8 @@ padding:0;
     left: 5vw;
     
 }
+
+/* Header title and icon fixed siuze on smaller screens*/
 
 @media (max-width: 1360px){
     .header-block-item > h1 {
@@ -87,174 +102,9 @@ padding:0;
     }
 }
 
-.icon-container {
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    text-align: center;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
+ /* Drop down elements across all pages*/
 
-a[class*="interact"]  {
-
-    padding-top: 5%;
-    padding-bottom: 5%;
-    color:white;
-    background-color: darkgrey;
-    text-align: center;
-    border: thin; 
-    text-decoration: none;
-    font-family:Calibri;
-    font-size: large;
-    font-weight: 200;
-    margin-bottom: 15px;
-    opacity: 0.7;
-    border-radius: 5%;
-    min-width: 250px;
-    max-width: 800px;
-    margin: 1.5%;
-
-}
-a[class*="interact"] {
-
-    color:white;
-    text-align: center;
-    text-decoration: none;
-    font-family:Calibri;
-    font-size: large;
-    font-weight: 200;
-
-}
-
-#topleftint {
-    background-color: cadetblue;
-}
-
-#toprightint {
-    background-color: chocolate;
-}
-
-#midleftint {
-    background-color: coral;
-}
-
-#midrightint {
-    background-color: darkseagreen;
-}
-
-#bttmleftint {
-    background-color: darkslateblue;
-}
-
-#bttmrightint {
-    background-color: lightcoral;
-}
-
-
-.about-Me {
-    width: 100%;
-    color: white;
-    background-color: white;
-    color: black;
-    margin-top:8%;
-}
-
-#main-body-Content {
-    margin-top: 3%;
-    width: 100%;
-    margin-bottom: 5%;
-    
-}
-
-#backIcon > a {
-    font-family: Calibri;
-    font-weight: 500;
-    color: black;
-    font-size: 30px;
-    text-decoration: none;
-    /*background-color: #D9D0D0;*/
-    background-color:none;
-    float: left;
-    
-    
-}
-
-#backIcon {
-    font-family: Calibri;
-    font-weight: 800;
-    color: black;
-    font-size: 50px;
-    text-decoration: none;
-    /*background-color: #D9D0D0;*/
-    float: left;
-    opacity: 0.75;
-    overflow-x: hidden;
-    
-}
-#main-body-Content > #backIcon {
-    background-color:rgba(255,0,0,0.0);
-}
-
-.lightSection {
-    /*/height:40%;*/
-    width:98%;
-    background-color:#D9D0D0;
-    left: 0;
-    top: 10%;
-    text-align: center;
-    background-color:#D9D0D0;
-    padding: 2%;
-    
-   
-}
-#main-body-content {
-    margin-top: 3%
-}
-
-
-
-.darkSection {
-    /*position:absolute;
-    height:40%;*/
-    width:99%;
-    background-color:#474f5b;
-    opacity: 0.9;
-    left: 0;
-    /*bottom: 0;*/
-    color:white;
-    text-align:center;
-    padding: 2%;
-    
-}
-
-.lightSection > * {
-    margin: 2%;
-}
-
-.darkSection > * {
-    margin: 2%;
-}
-
-
-.Ten10 {
-     color:#666666; 
-     display:inline;    
-     
-}
-#Ten10-10 {
-    color:mediumpurple;
-    margin-left: 0;
-}
-#Ten10-Ten {
-    margin-right: 0;
-}
-
-.isVisible {
+ .isVisible {
     display:inline-block;
 }
 
@@ -303,4 +153,231 @@ a[class*="interact"] {
     }
 }
 
+/*background blocks and general styling of pages*/
 
+.lightSection {
+    width:98%;
+    background-color:#D9D0D0;
+    left: 0;
+    top: 10%;
+    text-align: center;
+    background-color:#D9D0D0;
+    padding: 2%;
+    
+}
+
+/*Reduce conflict with headers*/
+
+#main-body-content {
+    margin-top: 3%
+}
+
+.darkSection {
+    /*position:absolute;
+    height:40%;*/
+    width:99%;
+    background-color:#474f5b;
+    opacity: 0.9;
+    left: 0;
+    /*bottom: 0;*/
+    color:white;
+    text-align:center;
+    padding: 2%;
+    
+}
+
+.lightSection > * {
+    margin: 2%;
+}
+
+.darkSection > * {
+    margin: 2%;
+}
+
+
+/* Homepage */
+
+.about-Me {
+    width: 100%;
+    color: white;
+    background-color: white;
+    color: black;
+    margin-top:8%;
+}
+
+.about-Me > p {
+    background-color: #D9D0D0;
+    font-size: 24px;
+}
+
+/* Tile Elements on Home*/
+
+a[class*="tileIconHome"]  {
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color:white;
+    background-color: darkgrey;
+    text-align: center;
+    border: thin; 
+    text-decoration: none;
+    font-family:Calibri;
+    font-size: large;
+    font-weight: 200;
+    margin-bottom: 15px;
+    opacity: 0.7;
+    border-radius: 5%;
+    min-width: 250px;
+    max-width: 800px;
+    margin: 1.5%;
+
+}
+a[class*="tileIconHome"] {
+
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    font-family:Calibri;
+    font-size: large;
+    font-weight: 200;
+
+}
+
+#aboutTile {
+    background-color: cadetblue;
+}
+
+#experienceTile {
+    background-color: chocolate;
+}
+
+#educationTile {
+    background-color: coral;
+}
+
+#achievementTile {
+    background-color: darkseagreen;
+}
+
+#ProjectsTile {
+    background-color: darkslateblue;
+}
+
+#contactTile {
+    background-color: lightcoral;
+}
+
+#main-body-Content {
+    margin-top: 3%;
+    width: 100%;
+    margin-bottom: 5%;
+    
+}
+
+/*Redundent CSS - No back button use drop down for navigation
+#backIcon > a {
+    font-family: Calibri;
+    font-weight: 500;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    background-color:none;
+    float: left;
+    
+    
+}
+
+#backIcon {
+    font-family: Calibri;
+    font-weight: 800;
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+
+    float: left;
+    opacity: 0.75;
+    overflow-x: hidden;
+}
+#main-body-Content > #backIcon {
+    background-color:rgba(255,0,0,0.0);
+}*/
+
+
+
+
+
+
+/*Specific styling*/
+
+/*Ten10 colour scheme text on experience page*/
+
+.Ten10 {
+     color:#666666; 
+     display:inline;    
+     
+}
+#Ten10-10 {
+    color:mediumpurple;
+    margin-left: 0;
+}
+#Ten10-Ten {
+    margin-right: 0;
+}
+
+/* Styling of contact form */
+
+#contactForm > form > * {
+    width: 55%;
+    margin-left:30%;
+    margin-right:10%;
+}
+
+#contactForm > .inputFields > * {
+    display: flex;
+    width: 40vw;
+    min-width: 300px;
+    align-items: center;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+[name=messageField] {
+    height: 6em;
+}
+
+#messageDetails {
+    display:none;
+}
+
+.validationMessage {
+    background-color: green;
+    color: white;
+    top:0.8vw;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-left: 3%;
+    background-color: green;
+    color: white;
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5vw;
+    height: 2vw;
+    vertical-align:middle;
+    line-height: 1.75vw;
+    display: none;
+    font-weight:600;
+}
+@media (max-width: 1360px) {
+    .validationMessage{
+        height: 3vw;
+        line-height: 2.75vw;
+        display: none;
+}
+}
+.contactLinkHeader > a {
+    text-decoration: none;
+    color:black;
+}
