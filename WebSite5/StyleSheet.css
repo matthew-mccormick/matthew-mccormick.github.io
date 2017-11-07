@@ -446,3 +446,23 @@ figure > img{
         
     }
 }
+
+/*Projects Page*/
+
+#cardIcons {
+    float: right;
+    display:block;
+    top: 5.5em;
+    position: absolute;
+    right: 10%;
+    height: 10vw;
+    width: auto;
+}
+#commandLineIcon {
+    display:block;
+    top: 5.5em;
+    position: absolute;
+    right: 75%;
+    height: 10vw;
+    width: auto;
+}
