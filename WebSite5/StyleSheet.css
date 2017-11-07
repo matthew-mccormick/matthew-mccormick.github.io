@@ -122,7 +122,7 @@ padding:0;
     text-align: left;  
     font-family: Calibri;
     position:absolute;
-    top:3.1vw;
+    top: 3.5vw;
     left:0;
     margin-top: 1em;
     margin-left: 0;
@@ -173,13 +173,10 @@ padding:0;
 }
 
 .darkSection {
-    /*position:absolute;
-    height:40%;*/
     width:99%;
     background-color:#474f5b;
     opacity: 0.9;
     left: 0;
-    /*bottom: 0;*/
     color:white;
     text-align:center;
     padding: 2%;
@@ -380,4 +377,72 @@ a[class*="tileIconHome"] {
 .contactLinkHeader > a {
     text-decoration: none;
     color:black;
+}
+
+/* Experience Page*/
+
+.TechnologyIcons {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: table;
+    object-position:center;
+    
+}
+.TechnologyIcons > figure{
+        display: inline-block;
+        padding: 3%;
+        
+}
+.TechnologyIcons > figcaption {
+    display: block;
+}
+figure > img{
+    width: auto;
+    height: 10vw;
+    position: center;
+
+
+}
+
+.rolesAndResp {    
+    display:inline-flex;
+    list-style: none;
+    width: 90%;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: #99CCFF;
+    font-weight: 600;
+}
+@media (max-width:800px){
+    .rolesAndResp {
+        display: block;
+        margin-left: 22%;
+        margin-right: 5%;
+        width: 75%;
+        
+    }
+    .rolesAndResp > li {
+       white-space:normal;
+    }
+}
+
+.rolesAndResp > li {
+    width:55%;
+    margin: 1%;
+    border-color: #99CCFF;
+    border: groove;
+    text-align:center;
+    display: flex;
+}
+.rolesAndResp > li > p {
+    vertical-align: middle;
+}
+
+@media (max-width:1300px){
+    .TechnologyIcons {
+        display: block;
+        
+    }
 }
