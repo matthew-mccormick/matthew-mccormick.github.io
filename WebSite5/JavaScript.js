@@ -1,4 +1,6 @@
-﻿$(document).ready(function messageVisibility() {
+﻿/* Message visisbility upon contact form submission */
+
+$(document).ready(function messageVisibility() {
     if ($("#successfulSubmission").length > 0) {
         $('#contactForm').hide();
         document.getElementById("messageDetails").style.display = "block";
@@ -6,6 +8,8 @@
    
     }
 });
+
+/* Drop down header shown when mouse over logo*/
 
 $(document).ready(function showDropDownUponHover() {
     $('.dropDownHeader').mouseover(function () {
@@ -24,6 +28,21 @@ $(document).ready(function showDropDownUponHover() {
     })
 });
 
+/* Change colour of drop down headers from mouse over */
+
+$(document).ready(function changeColourDropDownItem() {
+    $('.dropDownListItem').mouseover(function () {
+
+        $(this).css({ "color": "#3399ff" });
+    })
+    $('.dropDownListItem').mouseout(function () {
+
+        $(this).css({ "color": "" });
+    })
+})
+
+/* Change colour of tiles in the 'alternative page */
+
 $(document).ready(function changeColourTile() {
     $('.tileIconHome').mouseover(function () {
         
@@ -35,31 +54,7 @@ $(document).ready(function changeColourTile() {
     })
 })
 
-$(document).ready(function changeColourDropDownItem() {
-    $('.dropDownListItem').mouseover(function () {
-
-        $(this).css({"color": "#3399ff" });
-    })
-    $('.dropDownListItem').mouseout(function () {
-
-        $(this).css({"color": ""});
-    })
-})
-
-function changeColourHover(x) {
-    x.style.backgroundColor = "white";
-    x.style.color = "black";
-}
-function revertColourChange(x) {
-    x.style.backgroundColor = "";
-    x.style.color = "";
-}
-function changeHeaderHoverColour(x) {
-    x.style.color = "#3399ff"
-}
-function colourResetHeaderLink(x) {
-    x.style.color = "white";
-}
+/* change colour of links upon mouse over in contact page */
 
 $(document).ready(function changeContactText() {
     $(".contactLinkHeader > a").mouseover(function () {
@@ -70,24 +65,26 @@ $(document).ready(function changeContactText() {
     })
 });
 
+/* Homepage text transition */
+
 var dateHour = new Date();
 var hour = dateHour.getHours();
 var messageHour;
 $(document).ready(function dateMessage(callback) {
     if (hour < 12) {
-        document.getElementById("messageGreet").innerHTML = "Good Morning."
+        document.getElementById("messageGreet").innerHTML = "Good Morning"
         var messageHour = "Good Morning.";
     }
     else if (hour >= 12 && hour <= 17) {
-        document.getElementById("messageGreet").innerHTML = "Good Afternoon."
+        document.getElementById("messageGreet").innerHTML = "Good Afternoon"
         var messageHour = "Good Afternoon";
     }
     else if (hour > 17 && hour < 24) {
-        document.getElementById("messageGreet").innerHTML = "Good Evening."
+        document.getElementById("messageGreet").innerHTML = "Good Evening"
         var messageHour = "Good Evening";
     }
     else {
-        document.getElementById("messageGreet").innerHTML = "Hello."
+        document.getElementById("messageGreet").innerHTML = "Hello"
         messageHour = "Hello";
     }
     return messageHour
@@ -97,27 +94,32 @@ $(document).ready(function dateMessage(callback) {
 
 var intLoop = 4;
 $(document).ready(function setIntervalLoop() {
-    
-    setInterval(function () {
-        var cycleText = [$('#messageGreet').text(), "Welcome to Matthew's Website", "Feel free to look around", "Use the Mc Icon to navigate between pages", "Contact me for more information"]
-        if (intLoop < 4 && isRunning) {
-            intLoop++;
+    var startUpCount = 0;
+    while (startUpCount < 1) {
+            $('#messageGreetCycle').delay(4000).fadeOut(500);
+            startUpCount++;
         }
-        else if (intLoop >= 4 && isRunning) {
-            intLoop = 0
-        }
-        $('#messageGreetCycle').text(cycleText[intLoop]).fadeIn().delay(4000);
-        if (isRunning) {
-            $('#messageGreetCycle').text(cycleText[intLoop]).fadeOut(500).delay(1000);
-        }
-        else if (!isRunning) {
-            $('#messageGreetCycle').show();
-        }
-            
-    }, 6000);
+        setInterval(function () {
+            var cycleText = [$('#messageGreet').text(), "Welcome to Matthew's Website", "Feel free to look around", "Use the Mc Icon to navigate between pages", "Contact me for more information"]
+            if (intLoop < 4 && isRunning) {
+                intLoop++;
+            }
+            else if (intLoop >= 4 && isRunning) {
+                intLoop = 0
+            }
+            $('#messageGreetCycle').text(cycleText[intLoop]).fadeIn().delay(4000);
+            if (isRunning) {
+                $('#messageGreetCycle').text(cycleText[intLoop]).fadeOut(500).delay(1000);
+            }
+            else if (!isRunning) {
+                $('#messageGreetCycle').show();
+            }
+
+        }, 6000);
+
 });
 
-    
+   /* Stopping or resuming transitions */ 
      var isRunning = true;
      $(document).ready(function pauseResumeLoop() {
          $('#pauseLoop').click(function () {
@@ -147,3 +149,22 @@ $(document).ready(function setIntervalLoop() {
          });
          
      });
+
+
+
+     /* Change colour depreciated -- No longer required!*/
+
+     function changeColourHover(x) {
+         x.style.backgroundColor = "white";
+         x.style.color = "black";
+     }
+     function revertColourChange(x) {
+         x.style.backgroundColor = "";
+         x.style.color = "";
+     }
+     function changeHeaderHoverColour(x) {
+         x.style.color = "#3399ff"
+     }
+     function colourResetHeaderLink(x) {
+         x.style.color = "white";
+     }
