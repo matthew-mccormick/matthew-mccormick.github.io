@@ -130,7 +130,7 @@ $(document).ready(function setIntervalLoop() {
              }
              else {
                  isRunning = true;
-                 document.getElementById("pauseLoop").src = "/Images/pauseIcon.PNG"
+                 document.getElementById("pauseLoop").src = "/Images/pauseIcon.png"
                  document.getElementById('pauseLoop').innerHTML = "Start";
              }
              
