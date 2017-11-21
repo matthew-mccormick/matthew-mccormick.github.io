@@ -113,8 +113,11 @@ padding:0;
     .darkSectionFull {
         margin-top: 5em;
     }
+    .lightSection {
+        margin-top: 5em;
+    }
     #messageGreetCycle {
-        font-size: 5em;
+        font-size: 3.5em;
     }
 }
 
@@ -472,9 +475,10 @@ figure > img{
 @media (max-width:800px){
     .rolesAndResp {
         display: block;
-        margin-left: 22%;
+        margin-left: 15%;
         margin-right: 5%;
         width: 75%;
+        font-size: 3vw;
         
     }
     .rolesAndResp > li {
