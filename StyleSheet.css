@@ -86,23 +86,38 @@ padding:0;
 
 @media (max-width: 1360px){
     .header-block-item > h1 {
-        font-size: 32.5px;
-        left: 2.5em;
+        font-size: 2em;
+        left: 2em;
+    }
+    .header-block-item {
+        padding-bottom: 20px;
     }
     .homeIcon > a {
-        font-size: 2em;
+        font-size: 37px;
     }
+    
 }
 
 @media (max-width: 580px) {
     .header-block-item > h1 {
-        font-size: 25px;
+        font-size: 2em;
+    }
+    .header-block-item {
+        padding: 3%;
+        height: 4em;
     }
     #main-body-Content {
         padding-top: 1.5%;
        
     }
+    .darkSectionFull {
+        margin-top: 5em;
+    }
+    #messageGreetCycle {
+        font-size: 5em;
+    }
 }
+
 
  /* Drop down elements across all pages*/
 
@@ -243,7 +258,7 @@ padding:0;
     bottom: 5%;
     position: fixed;
     right: 5%;
-    font-size: 2vw;
+    font-size: 30px;
     border: white;
     border: solid;
     border-radius: 50px;
@@ -256,7 +271,7 @@ padding:0;
 }
 #pauseLoop {
     position: absolute;
-    top: 3.5%;
+    top: 6em;
     right: 4%;
     height: 20px;
     
@@ -275,7 +290,7 @@ padding:0;
     position: fixed;
     vertical-align: middle;
     align-self: center;
-
+    
 }
 
 /* Tile Elements on Home*/
