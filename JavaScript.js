@@ -126,7 +126,7 @@ $(document).ready(function setIntervalLoop() {
              if (isRunning) {
                  isRunning = false
                  document.getElementById('pauseLoop').innerHTML = "Start";
-                 document.getElementById("pauseLoop").src = "/Images/startIcon.PNG"
+                 document.getElementById("pauseLoop").src = "/Images/startIcon.png"
              }
              else {
                  isRunning = true;
