@@ -1,6 +1,7 @@
 ﻿@using System.Configuration;
 
 @{
+    <!--Validation checks for required fields-->
     var validationMessage = "";
     var isvalidationSucess = "SubmitContactForm";
     Validation.RequireField("senderName", "Name is required.");
@@ -9,7 +10,7 @@
     Validation.RequireField("messageField", "A Message is required.");
 
 
-
+    <!-- When the user posts the information and the information is valid, then send the information to the db-->
     if (IsPost && Validation.IsValid())
     {
         var newName = new DatabaseDAO();
@@ -52,12 +53,12 @@
     <div class="container">
         
         <header class="header-block-item">
-            <div class="homeIcon">
-                <a class="dropDownHeader" href="~/index.html">Mc</a>
+            <div class="homeIcon"> 
+                <a class="dropDownHeader" href="~/index.html">Mc</a> <!--Logo and Home icon-->
             </div>
             <h1>Contact</h1>
         </header>
-
+        <!--Navigation drop down list to be hidden until interaction has taken place-->
         <ul id="dropDownBox" class="isHidden">
             <li> <a id="aboutSideLink" href="About.html" class="dropDownListItem">About </a></li>
             <li> <a id="experienceSideLink" href="Experience.html" class="dropDownListItem">Experience </a></li>
@@ -73,10 +74,10 @@
     <div id="main-body-Content">
         <p class="validationMessage">@validationMessage</p>
         
-        <div class="lightSection">
+        <div class="lightSection"> <!--Start light section of the page-->
             
 
-            <div id="messageDetails">
+            <div id="messageDetails"> <!-- Retrieve message requests to be sent-->
                 <h3> Message Summary</h3>
                 <p class="name">Name: @Request["senderName"]</p>
                 <p class="name">Email: @Request["emailAddress"]</p>
@@ -91,6 +92,7 @@
                 Contact Me
 
             </h1>
+            <!--Contact details and links-->
             <h2 class="contactLinkHeader"> <a href="mailto:matthew_mccormick@hotmail.co.uk?subject=Hello&amp;" alt="Click to send an email"> Email </a> | <a href="https://www.linkedin.com/in/matthew-mccormick-7b891179/" alt="Click to view Matthew's LinkedIn Profile'"> LinkedIn </a> | <a href="#contactForm" alt="Navigate to the Contact Me form'"> Web </a></h2>
 
             <p>
@@ -101,7 +103,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
             </p>
 
-
+            <!--Contact form which processes user input including validation and sends it to the db-->
             <div id="contactForm">
                 <h3> Send a message</h3>
 
