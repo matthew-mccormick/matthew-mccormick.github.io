@@ -1,10 +1,11 @@
 ﻿
+/*CROSS-PAGE STYLING*/
+
 /* CSS for main elements and styling*/
 
 
 body {
     font-family: Calibri;
-    /*background-color: #D9D0D0;*/
     background-image: url(Images/dust_scratches.png);
     position:absolute;
     overflow-y:scroll;
@@ -177,7 +178,6 @@ padding:0;
 
 .lightSection {
     width:98%;
-    /*background-color:#D9D0D0;*/
     background-image: url(Images/dust_scratches.PNG);
     left: 0;
     top: 10%;
@@ -223,9 +223,7 @@ padding:0;
     left: 20%;
     vertical-align:middle;
 }
-#messageGreet {
-    display:none;
-}
+
 
 
 
@@ -237,6 +235,7 @@ padding:0;
     margin: 2%;
 }
 
+/*PAGE-SPECIFIC STYLING*/
 
 /* Homepage */
 
@@ -475,7 +474,7 @@ figure > img{
 @media (max-width:800px){
     .rolesAndResp {
         display: block;
-        margin-left: 15%;
+        margin-left: 20%;
         margin-right: 5%;
         width: 75%;
         font-size: 3vw;
@@ -523,4 +522,14 @@ figure > img{
     right: 75%;
     height: 10vw;
     width: auto;
+}
+
+
+
+
+
+/*UNRELATED/OTHER*/
+
+#messageGreet {
+    display:none; /*Message greet not displayed as its purpose is to feed information to JavaScript.js*/
 }

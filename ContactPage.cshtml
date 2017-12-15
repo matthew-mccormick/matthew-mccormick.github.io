@@ -19,7 +19,7 @@
         string companyName = Request["companyName"];
         string subjectField = Request["subjectField"];
         string messageField = Request["messageField"];
-        newName.addContactDetails(sendName, emailAddress, companyName, subjectField, messageField);
+        newName.addContactDetails(sendName, emailAddress, companyName, subjectField, messageField); <!--Add items to the db-->
         //Response.Redirect("/ContactMessageSuccess.cshtml");
         @:messageVisibility();
         validationMessage = "Thank you. Your message has been sent.";
@@ -72,12 +72,12 @@
     </div>
 
     <div id="main-body-Content">
-        <p class="validationMessage">@validationMessage</p>
+        <p class="validationMessage">@validationMessage</p> <!--Validation message to confirm submission of the form-->
         
         <div class="lightSection"> <!--Start light section of the page-->
             
 
-            <div id="messageDetails"> <!-- Retrieve message requests to be sent-->
+            <div id="messageDetails"> <!--Display message when the form has posted and has been sent-->
                 <h3> Message Summary</h3>
                 <p class="name">Name: @Request["senderName"]</p>
                 <p class="name">Email: @Request["emailAddress"]</p>
@@ -106,6 +106,8 @@
             <!--Contact form which processes user input including validation and sends it to the db-->
             <div id="contactForm">
                 <h3> Send a message</h3>
+
+                <!-- Retrieve message requests to be sent -->
 
                 <form method="post" action="" class="inputFields">
                     <label for="name">Name*:</label>
