@@ -32,7 +32,9 @@
     }
     else if (IsPost && !Validation.IsValid())
     {
-        validationMessage = "NOT VALID!!!";
+        @:messageVisibility();
+        isvalidationSucess = "unsuccessfulSubmission";
+        validationMessage = "The message was not sent. One of more fields are required, please fill these in and try again.";
     }
     }
 

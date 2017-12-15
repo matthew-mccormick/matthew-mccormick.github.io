@@ -145,8 +145,16 @@ $(document).ready(function messageVisibility() {
     if ($("#successfulSubmission").length > 0) { //if successful submission exists, hide contact form and display message and confirmation
         $('#contactForm').hide(); 
         document.getElementById("messageDetails").style.display = "block";
+        $(this).css({"backgroundColor":"green"})
+        //document.getElementsByClassName("validationMessage").style.backgroundColor = "green";
         $(".validationMessage").show();
    
+    }
+    if ($("#unsuccessfulSubmission").length > 0) {
+        $(document.getElementsByClassName("validationMessage")).css({ "backgroundColor": "#db4646" })
+        //document.getElementsByClassName("validationMessage").style.backgroundColor = "red";
+        $(".validationMessage").show();
+        
     }
 });
 

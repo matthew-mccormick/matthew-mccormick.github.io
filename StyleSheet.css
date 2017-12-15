@@ -430,6 +430,7 @@ a[class*="tileIconHome"] {
         display: none;
 }
 }
+
 .contactLinkHeader > a {
     text-decoration: none;
     color:black;
@@ -532,4 +533,8 @@ figure > img{
 
 #messageGreet {
     display:none; /*Message greet not displayed as its purpose is to feed information to JavaScript.js*/
+}
+
+span.field-validation-error { /*Contact form input error messages*/
+    color: red;
 }
