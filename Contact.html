@@ -1,5 +1,5 @@
 ﻿<!--
-OLD CONTACT PAGE - TO BE REMOVED ONCE NEW INSTANCE OF THE CONTACT PAGE HAS BEEN PROVEN TO BE STABLE. PLEASE IGNORE.    
+Static contact page to be used for GitHub Pages    
 
 -->
 
@@ -14,24 +14,25 @@ OLD CONTACT PAGE - TO BE REMOVED ONCE NEW INSTANCE OF THE CONTACT PAGE HAS BEEN 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="JavaScript.js"></script>
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    
+
     <div class="container">
-        
+
         <header class="header-block-item">
             <div class="homeIcon">
-                <a class="dropDownHeader" href="/HomePage.cshtml">Mc</a>
+                <a class="dropDownHeader" href="/index.html">Mc</a> <!--Logo and Home icon-->
             </div>
             <h1>Contact</h1>
         </header>
-
+        <!--Navigation drop down list to be hidden until interaction has taken place-->
         <ul id="dropDownBox" class="isHidden">
             <li> <a id="aboutSideLink" href="About.html" class="dropDownListItem">About </a></li>
             <li> <a id="experienceSideLink" href="Experience.html" class="dropDownListItem">Experience </a></li>
             <li> <a id="educationSideLink" href="Education.html" class="dropDownListItem">Education </a></li>
             <li> <a id="achievementsSideLink" href="Achievements.html" class="dropDownListItem">Achievements</a></li>
-            <li> <a id="infoSideLink" href="Information.html" class="dropDownListItem">Projects</a></li>
+            <li> <a id="infoSideLink" href="Projects.html" class="dropDownListItem">Projects</a></li>
             <li> <a id="contactSideLink" href="Contact.html" class="dropDownListItem">Contact</a></li>
         </ul>
 
@@ -41,11 +42,14 @@ OLD CONTACT PAGE - TO BE REMOVED ONCE NEW INSTANCE OF THE CONTACT PAGE HAS BEEN 
     <div id="main-body-Content">
 
         <div class="lightSection">
+            <!--Start light section of the page-->
+
             <h1>
-                Contact Me
+                Get in touch
 
             </h1>
-            <h2> Email | LinkedIn | Web</h2>
+            <!--Contact details and links-->
+            <h2 class="contactLinkHeader"> <a href="mailto:matthew_mccormick@hotmail.co.uk?subject=Hello&amp;" alt="Click to send an email"> Email </a> | <a href="https://www.linkedin.com/in/matthew-mccormick-7b891179/" alt="Click to view Matthew's LinkedIn Profile'"> LinkedIn </a></h2>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
@@ -54,30 +58,9 @@ OLD CONTACT PAGE - TO BE REMOVED ONCE NEW INSTANCE OF THE CONTACT PAGE HAS BEEN 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
             </p>
-            <div id="contactForm">
-                <h3> Send a message</h3>
-
-                <form method="post" action="" class="inputFields">
-                    <label for="name">Name*:</label> 
-                    <input type="text" name="senderName" maxlength="100"/>
-                    <label for="name">email*:</label>
-                    <input type="text" name="emailAddress" maxlength="100" />
-                    <label for="compName">Company:</label> 
-                    <input type="text" name="companyName" maxlength="100"/>
-                    <label for="subject">Subject*:</label> 
-                    <input type="text" name="subjectField" maxlength="100"/>
-                    <label for="message">Message*:</label> 
-                    <textarea type="text" name="messageField" maxlength="500"></textarea>
-                    <div id="submitForm">
-                        <input type="submit" value="Submit"/>
-                    </div>
-                   
-
-                </form>
 
 
 
-            </div>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
             </p>
@@ -88,7 +71,12 @@ OLD CONTACT PAGE - TO BE REMOVED ONCE NEW INSTANCE OF THE CONTACT PAGE HAS BEEN 
 
         </div>
 
-        </div>
+    </div>
+    <div id="footerSection">
+        <p id="footerDescription">Created and Maintained by Matthew R. McCormick</p>
+        <p id="version">2017 | Version 1.0</p>
+
+    </div>
 
 
 </body>
