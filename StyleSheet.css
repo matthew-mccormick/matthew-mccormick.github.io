@@ -152,7 +152,7 @@ padding:0;
     }
     .header-block-item {
         padding: 3%;
-        height: 4em;
+        /*height: 4em;*/
     }
     #main-body-Content {
         padding-top: 1.5%;
@@ -181,7 +181,7 @@ padding:0;
 }
 #dropDownBox {
     
-    background-color:#474f5b;
+       background-color:#474f5b;
     width: 9.5%;
     height: 11vw;
     padding: 1em;
@@ -198,6 +198,7 @@ padding:0;
     list-style-type: none;
    position:fixed;
    z-index:5;
+       
 
 }
 
@@ -214,7 +215,7 @@ padding:0;
     #dropDownBox {
         width: 103px;
         height: 130px;
-        margin-top: 1.5em;
+        margin-top: 2em;
     }
     #dropDownBox > li > a {
         font-size: 20px;
