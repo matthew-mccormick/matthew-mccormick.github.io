@@ -12,14 +12,17 @@
 
     <div class="container">
 
-        <header class="header-block-item">
+        <header class="header-block-item" id="expandableHead">
             <div class="homeIcon">
-                <a class="dropDownHeader" href="/index.html">Mc</a> <!--Logo and Home icon-->
+                <img class="dropDownHeader" src="Images/HomeLogo.png" />
+                <img id="ExpandedMenuIcon" src="Images\BurgerMenuIcon.png" />
+                <img id="closeButton" src="Images/CloseButton.png" /> <!--Logo and Home icon-->
             </div>
             <h1>Projects</h1>
         </header>
         <!--Navigation drop down list to be hidden until interaction has taken place-->
         <ul id="dropDownBox" class="isHidden">
+            <li> <a id="homeSideLink" href="index.html" class="dropDownListItem">Home </a></li>
             <li> <a id="aboutSideLink" href="About.html" class="dropDownListItem">About </a></li>
             <li> <a id="experienceSideLink" href="Experience.html" class="dropDownListItem">Experience </a></li>
             <li> <a id="educationSideLink" href="Education.html" class="dropDownListItem">Education </a></li>

@@ -6,19 +6,35 @@ $(document).ready(function showDropDownUponHover() {
 
 
         $('.dropDownHeader').mouseover(function () {
-            $('#dropDownBox').show();
+            $('#ExpandedMenuIcon').show();
+            $('.dropDownHeader').hide();
         });
 
-        $('.dropDownHeader').mouseout(function () {
-            $('#dropDownBox').hide();
-        })
-        $('#dropDownBox').mouseover(function () {
-            $('#dropDownBox').show();
+        $('#ExpandedMenuIcon').mouseout(function () {
+            $('#ExpandedMenuIcon').hide();
+            $('.dropDownHeader').show();
         });
-
+        $('#ExpandedMenuIcon').click(function () {
+            $('#dropDownBox').animate({
+                opacity: 1,
+                height: "toggle"
+            }, 500);
+            $('#ExpandedMenuIcon').hide();
+            $('.dropDownHeader').hide();
+            $('#closeButton').show();
+        });
+        $('#closeButton').click(function () {
+            $('#dropDownBox').animate({
+                opacity: 0,
+                height: "toggle"
+            }, 500);
+            $('#closeButton').hide();
+        });
+        
+        /*
         $('#dropDownBox').mouseout(function () {
             $('#dropDownBox').hide();
-        })
+        })*/
 });
 
 
