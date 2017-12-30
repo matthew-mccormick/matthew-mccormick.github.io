@@ -20,25 +20,6 @@ $(document).ready(function showDropDownUponHover() {
             $('#dropDownBox').hide();
         })
 });
-function detectMob() {
-    if ('.header-block-item'.innerWidth() <= 800 && window.innerHeight <= 600) { //when the window is less than 800 disable hover
-        var isActive = false;
-        $('.dropDownHeader').removeAttr('href');
-        $(document).ready(function showDropDownUponHover() {
-
-            if (isActive == false) {
-                $('.dropDownHeader').click(function () {
-                    $('#dropDownBox').show();
-                });
-            }
-            else {
-                $('.dropDownHeader').click(function () {
-                    $('#dropDownBox').hide();
-                })
-            }
-        });
-    }
-}
 
 
 
