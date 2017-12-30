@@ -146,29 +146,39 @@ padding:0;
     
 }
 
-@media (max-width: 580px) {
+@media (max-width: 850px) {
     .header-block-item > h1 {
         font-size: 2em;
     }
-    .header-block-item {
-        padding: 3%;
-        /*height: 4em;*/
-    }
+
     #main-body-Content {
-        padding-top: 1.5%;
+        padding-top: 30px;
        
     }
-    .darkSectionFull {
-        margin-top: 5em;
-    }
-    .lightSection {
-        margin-top: 5em;
-    }
+
     #messageGreetCycle {
         font-size: 3.5em;
     }
 }
 
+@media (max-width: 484px) {
+    #expandableHead {
+        height: 60px
+    }
+}
+@media (max-width: 331px) {
+    #expandableHead {
+        height: 100px;
+    }
+    #pauseLoop {
+        top: 8em;
+    }
+}
+@media (min-width: 332px) {
+        #pauseLoop {
+            top: 6em;
+        }
+}
 
  /* Drop down elements across all pages*/
 
@@ -238,7 +248,7 @@ padding:0;
 
 #main-body-Content {
     margin-top: 3%;
-    margin-bottom: 0;
+    margin-bottom: 40px;
     
 }
 
@@ -278,6 +288,7 @@ padding:0;
 .lightSection > * {
     margin: 2%;
 }
+
 
 .darkSection > * {
     margin: 2%;
@@ -319,9 +330,9 @@ padding:0;
     height: 2%;
     width: auto;
 }
+
 #pauseLoop {
     position: absolute;
-    top: 6em;
     right: 4%;
     height: 20px;
     
@@ -511,36 +522,38 @@ figure > img{
 }
 
 .rolesAndResp {    
-    display:inline-flex;
+    display:block;
     list-style: none;
-    width: 90%;
     flex-flow: row;
     flex-wrap: nowrap;
     justify-content: center;
     color: #99CCFF;
     font-weight: 600;
+    font-size: 20px;
+    
 }
-@media (max-width:800px){
+@media (max-width:900px){
     .rolesAndResp {
         display: block;
-        margin-left: 20%;
-        margin-right: 5%;
         width: 75%;
-        font-size: 3vw;
-        
+        font-size: 25px;
+        margin-left: 6vw;
+        font-size: 25px;
     }
     .rolesAndResp > li {
        white-space:normal;
+       width:300px;
     }
 }
 
 .rolesAndResp > li {
-    width:55%;
+    width:20em;
+    height: 7em;
     margin: 1%;
     border-color: #99CCFF;
     border: groove;
     text-align:center;
-    display: flex;
+    display: inline-table;
 }
 .rolesAndResp > li > p {
     vertical-align: middle;
