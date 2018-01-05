@@ -210,7 +210,13 @@ padding:0;
 
 }
 
-
+@media (min-width: 800px) {
+    #dropDownBox {
+        width: 6em;
+        font-size: 3em;
+        padding-top: 4em;
+    }
+}
 
 #dropDownBox > li > a {
     color: white;
