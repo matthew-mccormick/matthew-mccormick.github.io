@@ -192,7 +192,7 @@ padding:0;
 #dropDownBox {
     
        background-color:#474f5b;
-    width: 5em;
+    width: 30%;
     height: 100%;
     padding: 1em;
     color: white;
@@ -204,8 +204,8 @@ padding:0;
     list-style-type: none;
    position:fixed;
    z-index:3;
-   padding-top: 1em;
-   font-size: 3em;
+   padding-top: 20%;
+   font-size: 6vw;
    opacity: 0;  
 
 }
@@ -215,6 +215,12 @@ padding:0;
 #dropDownBox > li > a {
     color: white;
     text-decoration: none;
+}
+
+#dropDownBox > li {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
 }
 
 /*@media (max-width: 1270px) {
