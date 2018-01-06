@@ -420,7 +420,7 @@ a[class*="tileIconHome"] {
 }
 
 #main-body-Content {
-    margin-top: 3%;
+    margin-top: 3.5em;
     width: 100%;
     /*margin-bottom: 5%;*/
     
@@ -501,6 +501,22 @@ a[class*="tileIconHome"] {
 .contactLinkHeader > a {
     text-decoration: none;
     color:black;
+}
+
+/*About Page*/
+
+.versionImage {
+    height: 15em;
+    border: 0.2em solid black;
+    border-radius: 5px;
+    left: 3em;
+    position: absolute;
+}
+figure > figcaption {
+    position: absolute;
+    left: 3em;
+    margin-top: 15.5em;
+    margin-bottom: 5em;
 }
 
 /* Experience Page*/
