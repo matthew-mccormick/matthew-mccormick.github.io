@@ -547,7 +547,7 @@ a[class*="tileIconHome"] {
 }
 .TechnologyIcons > figure{
         display: inline-block;
-        padding: 3%;
+        padding: 1.25%;
         
 }
 .TechnologyIcons > figcaption {
