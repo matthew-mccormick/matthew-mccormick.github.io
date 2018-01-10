@@ -78,7 +78,7 @@ $(document).ready(function dateMessage(callback) {
     callback(messageHour); // call back the message hour message
 });
 
-var intLoop = 4;  //Set the integerLoop Var
+var intLoop = 5;  //Set the integerLoop Var
 $(document).ready(function setIntervalLoop() {
     var startUpCount = 0;  //set the start up counter, which counts how many times the message has changed
     while (startUpCount < 1) {
