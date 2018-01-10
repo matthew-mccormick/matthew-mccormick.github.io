@@ -1,11 +1,11 @@
 ﻿/* CROSS-PAGE FUNCTIONALITY */
 
-/* Drop down header shown when mouse over logo*/
+/* Drop down header shown upon mouse interaction*/
 
 $(document).ready(function showDropDownUponHover() {
 
 
-        $('.dropDownHeader').mouseover(function () {
+        $('.dropDownHeader').mouseover(function () { /* Show burger menu icon upon hover */
             $('#ExpandedMenuIcon').show();
             $('.dropDownHeader').hide();
         });
@@ -14,27 +14,22 @@ $(document).ready(function showDropDownUponHover() {
             $('#ExpandedMenuIcon').hide();
             $('.dropDownHeader').show();
         });
-        $('#ExpandedMenuIcon').click(function () {
+        $('#ExpandedMenuIcon').click(function () { /* Fade in drop down menu upon click */
             $('#dropDownBox').animate({
                 opacity: 1,
                 height: "toggle"
             }, 500);
-            $('#ExpandedMenuIcon').hide();
-            $('.dropDownHeader').hide();
-            $('#closeButton').show();
+            $('#ExpandedMenuIcon').hide(); //hide burger menu
+            $('.dropDownHeader').hide(); //hide logo
+            $('#closeButton').show(); //show close button
         });
-        $('#closeButton').click(function () {
+        $('#closeButton').click(function () { /* Fade out drop down menu upon click */
             $('#dropDownBox').animate({
                 opacity: 0,
                 height: "toggle"
             }, 500);
-            $('#closeButton').hide();
+            $('#closeButton').hide(); //hide close button
         });
-        
-        /*
-        $('#dropDownBox').mouseout(function () {
-            $('#dropDownBox').hide();
-        })*/
 });
 
 
@@ -45,24 +40,11 @@ $(document).ready(function showDropDownUponHover() {
 $(document).ready(function changeColourDropDownItem() {
     $('.dropDownListItem').mouseover(function () {
 
-        $(this).css({ "color": "#3399ff" });
+        $(this).css({ "color": "#3399ff" }); //when mouse over change the text to blue
     })
     $('.dropDownListItem').mouseout(function () {
 
-        $(this).css({ "color": "" });
-    })
-})
-
-/* Change colour of tiles in the 'alternative page */
-
-$(document).ready(function changeColourTile() {
-    $('.tileIconHome').mouseover(function () {
-
-        $(this).css({ "backgroundColor": "white", "color": "black" });
-    })
-    $('.tileIconHome').mouseout(function () {
-
-        $(this).css({ "backgroundColor": "", "color": "" });
+        $(this).css({ "color": "" }); //when mouse out reset text to default colour
     })
 })
 
@@ -104,12 +86,12 @@ $(document).ready(function setIntervalLoop() {
         startUpCount++;
     }
     setInterval(function () {
-        var cycleText = [$('#messageGreet').text(), "Welcome to Matthew's Website", "Feel free to look around", "Use the Mc Icon to navigate between pages", "Contact me for more information"] //Messages to display on the page
-        if (intLoop < 4 && isRunning) {
-            intLoop++; //while the loop is less than 4 and has not been paused then continue to count
+        var cycleText = [$('#messageGreet').text(), "Welcome to Matthew's Website", "Test Analyst at Ten10 Group", "Experience in Agile, Functional and Automation Testing", "Find out more by selecting the Mc icon", "Contact me for more information"] //Messages to display on the page
+        if (intLoop < 5 && isRunning) {
+            intLoop++; //while the loop is less than 5 and has not been paused then continue to count
         }
-        else if (intLoop >= 4 && isRunning) {
-            intLoop = 0 //When it reaches 4, then reset the counter to 0
+        else if (intLoop >= 5 && isRunning) {
+            intLoop = 0 //When it reaches 5, then reset the counter to 0
         }
         $('#messageGreetCycle').text(cycleText[intLoop]).fadeIn().delay(4000); //Fade in the message associated with the integer loop (i.e. cycleText[1] will display the second message)
         if (isRunning) {
@@ -158,7 +140,7 @@ $(document).ready(function pauseResumeLoop() {
 
 /* PAGE-SPECIFIC FUNCTIONALITY */
 
-/* Contact Form */
+/* Contact Form - not used for static site*/
 
 /* Message visisbility upon contact form submission */
 
@@ -198,7 +180,7 @@ $(document).ready(function changeContactText() {
 
 
      /* Change colour depreciated -- No longer required!*/
-
+/*
      function changeColourHover(x) {
          x.style.backgroundColor = "white";
          x.style.color = "black";
@@ -213,3 +195,17 @@ $(document).ready(function changeContactText() {
      function colourResetHeaderLink(x) {
          x.style.color = "white";
      }
+
+
+ Change colour of tiles in the 'alternative page - no longer required
+/*
+$(document).ready(function changeColourTile() {
+    $('.tileIconHome').mouseover(function () {
+
+        $(this).css({ "backgroundColor": "white", "color": "black" });
+    })
+    $('.tileIconHome').mouseout(function () {
+
+        $(this).css({ "backgroundColor": "", "color": "" });
+    })
+})*/

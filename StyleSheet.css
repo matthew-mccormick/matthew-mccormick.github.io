@@ -10,8 +10,8 @@ body {
     position:absolute;
     overflow-y:scroll;
     overflow-x:hidden;
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
 }
 
 .icon-container {
@@ -43,7 +43,7 @@ padding:0;
 
 /* Header Elements*/
 
-.homeIcon > img {
+.homeIcon > img { /*Home Icon*/
     z-index: 12;
     height: 3.8em;
     width: 4em;
@@ -52,15 +52,15 @@ padding:0;
     left: 0.75vw;
     position: fixed;
 }
-#ExpandedMenuIcon {
+#ExpandedMenuIcon { /*Burger Menu default set to display none until interaction has taken place*/
     display:none;
 }
-#closeButton {
+#closeButton { /*Close button default set to display none until interaction has taken place*/
     display:none;
 }
 
-.header-block-item {
-    background-color: #474f5b;/*black;*/
+.header-block-item { /*Styling for the header*/
+    background-color: #474f5b;
     width: 100%;
     height: 30px; 
     padding: 1em;
@@ -81,7 +81,7 @@ padding:0;
 
 }
 
-.header-block-item > h1 {
+.header-block-item > h1 { /*Cross-Page Header Title*/
     color:white;
     text-align:left;
     float:left;
@@ -102,7 +102,7 @@ padding:0;
 @media (max-width: 520px) {
 
     #footerSection {
-        display: none;
+        display: none; /*Do not display on smaller screens*/
     }
    
 }
@@ -112,8 +112,8 @@ padding:0;
     }
 }
 
-#footerSection {
-    background-color: #474f5b;/*black;*/
+#footerSection { /*Styling for the footer*/
+    background-color: #474f5b;
     width: 100%;
     color: white;
     clear: left;
@@ -130,14 +130,14 @@ padding:0;
     font-weight: 600;
     height: 40px;
 }
-#footerDescription {
+#footerDescription { /*Styling for the footer text*/
     position: fixed;
     bottom: 0;
     margin-bottom: 16px;
     left: 16px;
     font-size: 1em;
 }
-#version{
+#version{ /*Footer version text*/
     position: fixed;
     bottom: 0;
     margin-bottom: 16px;
@@ -198,14 +198,14 @@ padding:0;
 
  /* Drop down elements across all pages*/
 
- .isVisible {
+ .isVisible { /*Display when has the class isVisible*/
     display:inline-block;
 }
 
-.isHidden {
+.isHidden { /*Do not display when has the class isHidden*/
     display: none;
 }
-#dropDownBox {
+#dropDownBox { /*Styling for the dropdown box*/
     
        background-color:#474f5b;
     width: 32%;
@@ -245,20 +245,9 @@ padding:0;
 
 }
 
-/*@media (max-width: 1270px) {
-    #dropDownBox {
-        width: 103px;
-        height: 130px;
-        margin-top: 2em;
-    }
-    #dropDownBox > li > a {
-        font-size: 20px;
-    }
-}*/
-
 /*background blocks and general styling of pages*/
 
-.lightSection {
+.lightSection { /*Light background section styling*/
     width:98%;
     background-image: url(Images/dust_scratches.PNG);
     left: 0;
@@ -268,15 +257,7 @@ padding:0;
     
 }
 
-/*Reduce conflict with headers*/
-
-#main-body-Content {
-    margin-top: 3%;
-    margin-bottom: 40px;
-    
-}
-
-.darkSection {
+.darkSection { /*Dark background section styling*/
     width:99%;
     background-color:#474f5b;
     opacity: 0.9;
@@ -286,7 +267,7 @@ padding:0;
     padding: 2%;
     
 }
-.darkSectionFull {
+.darkSectionFull { /*Full dark background*/
     width:99%;
     background-color:#474f5b;
     opacity: 0.9;
@@ -298,7 +279,7 @@ padding:0;
     height: 100%;
     position: fixed;
 }
-.darkSectionFull > h1 {
+.darkSectionFull > h1 { /*Header for dark full background*/
     font-size: 7vw;
     position: fixed;
     height: 50%;
@@ -306,16 +287,19 @@ padding:0;
     vertical-align:middle;
 }
 
-
-
-
 .lightSection > * {
     margin: 2%;
 }
 
-
 .darkSection > * {
     margin: 2%;
+}
+
+/*Reduce conflict with headers*/
+
+#main-body-Content {
+    margin-top: 3%;
+    margin-bottom: 40px; 
 }
 
 /*PAGE-SPECIFIC STYLING*/
@@ -330,11 +314,222 @@ padding:0;
 }
 
 .about-Me > p {
-    /*background-color: #D9D0D0;*/
     font-size: 24px;
 }
 
-#accessibleLink {
+#pauseLoop > img{ /*Image to pause the loop*/
+    height: 2%;
+    width: auto;
+}
+
+#pauseLoop {
+    position: absolute;
+    right: 4%;
+    height: 20px;
+    
+}
+#messageGreetCycle { /*Greeting message styling on Home*/
+    left: 0%;
+    height: 100%;
+    top: 20%;
+    vertical-align: middle;
+    align-content: center;
+}
+#messageGreetCycle{ /*Greeting message styling on Home*/
+    width: 100%;
+    align-content: center;
+    left: 0;
+    position: fixed;
+    vertical-align: middle;
+    align-self: center;
+    
+}
+
+#main-body-Content {
+    margin-top: 3.5em;
+    width: 100%;
+    
+}
+
+
+/*Specific styling*/
+
+/*Ten10 colour scheme text on experience page*/
+
+.Ten10 {
+     color:#666666; 
+     display:inline;    
+     
+}
+#Ten10-10 {
+    color:mediumpurple;
+    margin-left: 0;
+}
+#Ten10-Ten {
+    margin-right: 0;
+}
+
+/* Styling of contact form */
+
+#contactForm > form > * { /*All form element styling - not available on static site*/
+    width: 55%;
+    margin-left:30%;
+    margin-right:10%;
+}
+
+#contactForm > .inputFields > * { /*All contact input fields styling - not available on static site*/
+    display: flex;
+    width: 40vw;
+    min-width: 300px;
+    align-items: center;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+[name=messageField] {
+    height: 6em;
+}
+
+#messageDetails {
+    display:none; /*Do not display until message has been submitted*/
+}
+
+.validationMessage { /*Validation message styling on contact web form - not on static site*/
+    background-color: green;
+    color: white;
+    top:0.8vw;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+    margin-left: 3%;
+    background-color: green;
+    color: white;
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5vw;
+    height: 2vw;
+    vertical-align:middle;
+    line-height: 1.75vw;
+    display: none;
+    font-weight:600;
+}
+@media (max-width: 1360px) {
+    .validationMessage{
+        height: 3vw;
+        line-height: 2.75vw;
+        display: none;
+}
+}
+
+.contactLinkHeader > a {
+    text-decoration: none;
+    color:black;
+}
+
+/*About Page*/
+
+.versionImage {
+    height: 15em;
+    border: 0.2em solid black;
+    border-radius: 5px;
+    left: 3em;
+    position: absolute;
+}
+
+/* Experience Page*/
+
+.TechnologyIcons { /*Technology icon/image styling*/
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: table;
+    object-position:center;
+    
+}
+.TechnologyIcons > figure{
+        display: inline-block;
+        padding: 1.25%;
+        
+}
+.TechnologyIcons > figcaption {
+    display: block;
+}
+figure > img{
+    width: auto;
+    height: 10vw;
+    position: center;
+
+
+}
+
+.rolesAndResp {    /*Roles and responsibilities boxes styling on experience*/
+    display:block;
+    list-style: none;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: #99CCFF;
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+@media (max-width:900px){
+    .rolesAndResp {
+        display: block;
+        font-size: 25px;
+        margin-left: -30px;
+        font-size: 15px;
+    }
+    .rolesAndResp > li {
+       white-space:normal;
+       width:90%;
+    }
+}
+@media (min-width:900px){
+    .rolesAndResp > li {
+        width: 30em;
+        height: 10em;
+    }
+}
+
+.rolesAndResp > li {
+    
+    margin: 1%;
+    border-color: #99CCFF;
+    border: groove;
+    text-align:center;
+    display: inline-flex;
+}
+.rolesAndResp > li > p {
+    vertical-align: middle;
+}
+
+@media (max-width:1300px){
+    .TechnologyIcons {
+        display: block;
+        
+    }
+}
+
+/*Projects Page*/
+
+
+
+/*UNRELATED/OTHER*/
+
+#messageGreet {
+    display:none; /*Message greet not displayed as its purpose is to feed information to JavaScript.js*/
+}
+
+span.field-validation-error { /*Contact form input error messages*/
+    color: red;
+}
+
+/*DEPRECIATED
+
+    #accessibleLink {
     text-decoration: none;
     font-weight: 300;
     text-decoration: none;
@@ -350,35 +545,7 @@ padding:0;
     padding-left: 0.5%;
     padding-right: 0.5%;
 }
-#pauseLoop > img{
-    height: 2%;
-    width: auto;
-}
-
-#pauseLoop {
-    position: absolute;
-    right: 4%;
-    height: 20px;
-    
-}
-#messageGreetCycle {
-    left: 0%;
-    height: 100%;
-    top: 20%;
-    vertical-align: middle;
-    align-content: center;
-}
-#messageGreetCycle{
-    width: 100%;
-    align-content: center;
-    left: 0;
-    position: fixed;
-    vertical-align: middle;
-    align-self: center;
-    
-}
-
-/* Tile Elements on Home*/
+    /* Tile Elements on Home
 
 a[class*="tileIconHome"]  {
 
@@ -435,183 +602,6 @@ a[class*="tileIconHome"] {
     background-color: lightcoral;
 }
 
-#main-body-Content {
-    margin-top: 3.5em;
-    width: 100%;
-    /*margin-bottom: 5%;*/
-    
-}
-
-
-/*Specific styling*/
-
-/*Ten10 colour scheme text on experience page*/
-
-.Ten10 {
-     color:#666666; 
-     display:inline;    
-     
-}
-#Ten10-10 {
-    color:mediumpurple;
-    margin-left: 0;
-}
-#Ten10-Ten {
-    margin-right: 0;
-}
-
-/* Styling of contact form */
-
-#contactForm > form > * {
-    width: 55%;
-    margin-left:30%;
-    margin-right:10%;
-}
-
-#contactForm > .inputFields > * {
-    display: flex;
-    width: 40vw;
-    min-width: 300px;
-    align-items: center;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-}
-
-[name=messageField] {
-    height: 6em;
-}
-
-#messageDetails {
-    display:none;
-}
-
-.validationMessage {
-    background-color: green;
-    color: white;
-    top:0.8vw;
-    left: 0;
-    margin-left: 0;
-    width: 100%;
-    margin-left: 3%;
-    background-color: green;
-    color: white;
-    position: relative;
-    margin-left: 0;
-    width: 100%;
-    text-align: left;
-    margin-top: 0.5vw;
-    height: 2vw;
-    vertical-align:middle;
-    line-height: 1.75vw;
-    display: none;
-    font-weight:600;
-}
-@media (max-width: 1360px) {
-    .validationMessage{
-        height: 3vw;
-        line-height: 2.75vw;
-        display: none;
-}
-}
-
-.contactLinkHeader > a {
-    text-decoration: none;
-    color:black;
-}
-
-/*About Page*/
-
-.versionImage {
-    height: 15em;
-    border: 0.2em solid black;
-    border-radius: 5px;
-    left: 3em;
-    position: absolute;
-}
-/*figure > figcaption {
-    position: absolute;
-    left: 3em;
-    margin-top: 15.5em;
-    margin-bottom: 5em;
-}*/
-
-/* Experience Page*/
-
-.TechnologyIcons {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    display: table;
-    object-position:center;
-    
-}
-.TechnologyIcons > figure{
-        display: inline-block;
-        padding: 1.25%;
-        
-}
-.TechnologyIcons > figcaption {
-    display: block;
-}
-figure > img{
-    width: auto;
-    height: 10vw;
-    position: center;
-
-
-}
-
-.rolesAndResp {    
-    display:block;
-    list-style: none;
-    flex-flow: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    color: #99CCFF;
-    font-weight: 600;
-    font-size: 20px;
-    
-}
-@media (max-width:900px){
-    .rolesAndResp {
-        display: block;
-        font-size: 25px;
-        margin-left: -30px;
-        font-size: 15px;
-    }
-    .rolesAndResp > li {
-       white-space:normal;
-       width:90%;
-    }
-}
-@media (min-width:900px){
-    .rolesAndResp > li {
-        width: 30em;
-        height: 10em;
-    }
-}
-
-.rolesAndResp > li {
-    
-    margin: 1%;
-    border-color: #99CCFF;
-    border: groove;
-    text-align:center;
-    display: inline-flex;
-}
-.rolesAndResp > li > p {
-    vertical-align: middle;
-}
-
-@media (max-width:1300px){
-    .TechnologyIcons {
-        display: block;
-        
-    }
-}
-
-/*Projects Page*/
-
 #cardIcons {
     float: right;
     display:block;
@@ -630,16 +620,4 @@ figure > img{
     width: auto;
 }
 
-
-
-
-
-/*UNRELATED/OTHER*/
-
-#messageGreet {
-    display:none; /*Message greet not displayed as its purpose is to feed information to JavaScript.js*/
-}
-
-span.field-validation-error { /*Contact form input error messages*/
-    color: red;
-}
+    */
