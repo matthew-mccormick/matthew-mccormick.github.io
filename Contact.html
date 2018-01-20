@@ -13,6 +13,7 @@ Static contact page to be used for GitHub Pages
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="JavaScript.js"></script>
+    <script src="GoogleSheetContactForm.js"></script> <!--ContactForm script-->
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Define Width as screen size-->
 </head>
@@ -62,7 +63,25 @@ Static contact page to be used for GitHub Pages
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
             </p>
 
+            <!--Form to send - Static site redirects to GSheets-->
 
+            <form id="contactForm">
+                <p>
+                    <label>Name: </label>
+                    <input id="nameInput" name="Name" type="text" />
+                </p>
+                <p>
+                    <label>Email: </label>
+                    <input id="emailAddress" name="Email" type="email" />
+                </p>
+                <p>
+                    <label>Message</label>
+                    <textarea id="messageText" name="Message" rows="7"></textarea>
+                </p>
+                
+                <button id="submitBtn" type="submit">Send</button>
+
+            </form>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.
