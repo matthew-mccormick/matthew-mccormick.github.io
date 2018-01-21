@@ -5,17 +5,28 @@ I very much appreciate their efforts and willingness to share their solution to
 incorporating forms into static sites
 */
 
+
+
 var request;
 
-document.getElementById("submitBtn").addEventListener("click", function (event) {
-    event.preventDefault()
-});
-
 //upon submission of the form, perform function
-$("#contactForm").submit(function (event) {
-    form.addEventListener('submit', event => {
-        event.preventDefault()
-    });
+$("#contactForm").on('click', function postToSheet(event) {
+        event.preventDefault
+        request = $.ajax({
+            url: url,
+            type: "post",
+            method: "POST",
+            data: serializedData,
+            dataType: "JSON",
+            statusCode: 200,
+            success: function () {
+                alert("Woo!");
+            },
+            error: function () {
+                alert("Boo!");
+
+        }
+        });
     event.preventDefault();
 
     //abort pending reqs
@@ -30,7 +41,7 @@ $("#contactForm").submit(function (event) {
 
     //serialize data
 
-    var serializedData = $form.serialize();
+    var serializedData = $('#contactForm').serialize();
 
     //disable inputs
 
@@ -39,26 +50,6 @@ $("#contactForm").submit(function (event) {
     //fire request
 
     var url = "https://script.google.com/a/ten10.com/macros/s/AKfycbwl2UVH6Gq663y21BO4cFBHp6G-uTET2WApWQDqvPSdqOrGe_0/exec"
-
-    $.post(url, $('#contactForm').serialize())
-
-    request = $.ajax({
-        url: url,
-        type: "post",
-        method: "POST",
-        data: serializedData,
-        dataType: "JSON",
-        statusCode: 200,
-        success: function () {
-            alert("Woo!")
-        },
-        error: function () {
-            alert("Boo!")
-        }
-
-    });
-
-    event.preventDefault();
 
     //Callback log
 

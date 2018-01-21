@@ -64,24 +64,45 @@ Static contact page to be used for GitHub Pages
             </p>
 
             <!--Form to send - Static site redirects to GSheets-->
+            <div id="contactForm">
+                <h3>Send a message</h3>
 
-            <form id="contactForm">
-                <p>
-                    <label>Name: </label>
-                    <input id="nameInput" name="Name" type="text" />
-                </p>
-                <p>
-                    <label>Email: </label>
-                    <input id="emailAddress" name="Email" type="email" />
-                </p>
-                <p>
-                    <label>Message</label>
-                    <textarea id="messageText" name="Message" rows="7"></textarea>
-                </p>
-                
-                <button id="submitBtn" type="submit">Send</button>
+                <form action="https://formspree.io/matthew_mccormick@hotmail.co.uk"
+                      method="post" class="inputFields">
+                        <label>Name*: </label>
+                        <input id="nameInput" name="senderName" type="text" 
+                               maxlength="100" class="field-validation-valid" required/>
+                        <label>Email*: </label>
+                        <input id="emailAddress" name="Email" type="email" maxlength="150" required/>
+                        <label for="compName">Company:</label>
+                        <input type="text" name="companyName" maxlength="100" />
+                        <label for="subject">Subject*:</label>
+                        <input type="text" name="subjectField" maxlength="100" required/>
+                        <label>Message*:</label>
+                        <textarea id="messageText" name="Message" maxlength="1500" rows="10" required></textarea>
+                        <label>How did you hear about this?</label>
+                        <select name="hearAbout">
+                            <option value="" disabled selected>-- Please Select --</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Email">Email</option>
+                            <option value="Word of Mouth">Word of Mouth</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    <label> Do you require a reply?</label>
+                    <div id="radioResponse">
+                        <input type="radio" value="yes" name="Reply"> Yes <br />
+                        <input type="radio" value="No" name="Reply"> No <br />
+                    </div>
+                    
+                    <div id="submitForm">
+                        <input type="submit" value="Submit" />
 
-            </form>
+                    </div>
+                    
+                </form>
+
+            </div>
+            
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sollicitudin, sem sed mollis vestibulum, nunc lacus porttitor lacus, id laoreet eros massa quis ex. Pellentesque varius ipsum erat, vel vestibulum libero sodales id. Praesent vel ipsum vel odio rutrum suscipit a vulputate velit. Mauris volutpat est vel leo cursus, sed hendrerit nulla ullamcorper. Ut sed arcu vulputate, ultrices arcu id, faucibus mi. Suspendisse enim lectus, cursus non placerat ac, aliquet et turpis. Cras dictum ut ante a porta. Sed enim augue, iaculis nec orci vitae, facilisis condimentum arcu. Nullam tristique, justo sit amet rhoncus vestibulum, ipsum ante bibendum nibh, vitae imperdiet diam est vitae lacus. Phasellus porttitor ipsum quis dui malesuada imperdiet scelerisque non quam. Phasellus nisl odio, fringilla eget urna sit amet, dignissim porttitor sapien.

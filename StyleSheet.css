@@ -386,6 +386,12 @@ body {
     margin-bottom: 0.5%;
 }
 
+textarea {
+    resize:none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 [name=messageField] {
     height: 6em;
 }
